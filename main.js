@@ -171,3 +171,4 @@ function drawSegmento(x=0,y=0,vertical=false,on,cor){
         ctx.fill();
     }
 }
+seteSegmentos(0);
