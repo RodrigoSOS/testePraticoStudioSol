@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Prova Pratica Studio Sol</title>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head>
+    <body>
+        <div class="body">
+        <div class="container">
+            <H1 class="qual_eh">QUAL É O NÚMERO?</H1>
+            <hr>
+        </div>
+        <div class="container">
+            <p id="dica"></p>
+            <canvas id="seteSegmentos" width="200" height="108">Canvas não suportado.</canvas>
+            <br>
+            <button id="nova_partida" onclick="recomecar()" hidden="true"><span>&#10227;</span> NOVA PARTIDA</button>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <input type="text" id="in_text" placeholder="Digite o palpite" oninput="validar()" maxlength="3">
+            <button id="enviar" onclick="getInput()">ENVIAR</button>
+        </div>
+        </div>
+
+        <script type="text/javascript" src="./main.js"></script>
+    </body>
+</html>
