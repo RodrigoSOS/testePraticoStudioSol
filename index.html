@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="body">
@@ -14,15 +14,18 @@
             <H1 class="qual_eh">QUAL É O NÚMERO?</H1>
             <hr>
         </div>
-        <div class="container">
-            <p id="dica"></p>
-            <canvas id="seteSegmentos" width="200" height="108">Canvas não suportado.</canvas>
+        <p id="dica"> </p>
+        <div class="container noMeio">
+            
+            <br>
+            <canvas id="seteSegmentos"  width="200" height="108">Canvas não suportado.</canvas>
+            <br>
             <br>
             <button id="nova_partida" onclick="recomecar()" hidden="true"><span>&#10227;</span>  NOVA PARTIDA</button>
         </div>
         <br>
         <br>
-        <div class="container">
+        <div class="container emBaixo">
             <input type="text" id="in_text" placeholder="Digite o palpite" oninput="validar()" maxlength="3">
             <button id="enviar" onclick="getInput()">ENVIAR</button>
         </div>

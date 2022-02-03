@@ -53,7 +53,7 @@ function recomecar(){
     novaPartida.hidden=true;
     in_text.disabled=false;
     enviar.disabled=false;
-    dica.innerText="";
+    dica.innerText=" ";
     sortear();
 }
 
