@@ -80,7 +80,6 @@ function getInput(){
     }
 }
 
-seteSegmentos(2);
 function seteSegmentos(n){
     res = 1;
     ctx.height = canvas.height*res;
