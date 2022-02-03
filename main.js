@@ -2,6 +2,8 @@ const url = "https://us-central1-ss-devops.cloudfunctions.net/rand?min=1&max=300
 const canvas = document.getElementById('seteSegmentos');
 const ctx = canvas.getContext('2d');
 
+seteSegmentos(0);
+
 var valor = sortear();
 var estado = "start";
 
@@ -43,6 +45,7 @@ function validar(){
 }
 
 function recomecar(){
+    seteSegmentos(0);
     var novaPartida = document.getElementById("nova_partida");
     var in_text = document.getElementById("in_text");
     var enviar = document.getElementById("enviar");
@@ -80,10 +83,13 @@ function getInput(){
     }
 }
 
+
 function seteSegmentos(n){
     res = 1;
-    ctx.height = canvas.height*res;
-    ctx.width  = canvas.width*res;
+    //ctx.height = canvas.height*res;
+    //ctx.width  = canvas.width*res;
+    ctx.height = 108;
+    ctx.width  = 200;
     console.log(`seteSegmentos: ${n}`);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     var cor = "#262A34";
@@ -132,7 +138,6 @@ function drawNumero(x,y,n,cor){
         case 0: on = [1,1,0,1,1,1,1]; break;
         default : on = [0,0,0,0,0,0,0]; break;
     }
-
     
     drawSegmento(x+7,y+0,false,on[0],cor);
     drawSegmento(x+0,y+7,true,on[1],cor);
@@ -171,4 +176,3 @@ function drawSegmento(x=0,y=0,vertical=false,on,cor){
         ctx.fill();
     }
 }
-seteSegmentos(0);
